@@ -1,12 +1,9 @@
 package dev.eastar.sslhandshakeececption
 
-import android.accounts.Account
 import android.content.*
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.common.GoogleApiAvailability
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException
-import com.google.android.gms.common.GooglePlayServicesRepairableException
 import com.google.android.gms.security.ProviderInstaller
 
 private const val ERROR_DIALOG_REQUEST_CODE = 1
@@ -51,8 +48,7 @@ class MainActivity : AppCompatActivity(), ProviderInstaller.ProviderInstallListe
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int,
-                                  data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == ERROR_DIALOG_REQUEST_CODE) {
             // Adding a fragment via GoogleApiAvailability.showErrorDialogFragment

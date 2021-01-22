@@ -11,8 +11,7 @@ import com.google.android.gms.security.ProviderInstaller;
 /**
  * Sample activity using {@link ProviderInstaller}.
  */
-public class MainActivity2 extends Activity
-        implements ProviderInstaller.ProviderInstallListener {
+public class MainActivity2 extends Activity implements ProviderInstaller.ProviderInstallListener {
 
     private static final int ERROR_DIALOG_REQUEST_CODE = 1;
 
@@ -44,17 +43,14 @@ public class MainActivity2 extends Activity
         if (availability.isUserResolvableError(errorCode)) {
             // Recoverable error. Show a dialog prompting the user to
             // install/update/enable Google Play services.
-            availability.showErrorDialogFragment(
-                    this,
-                    errorCode,
-                    ERROR_DIALOG_REQUEST_CODE,
-                    new DialogInterface.OnCancelListener() {
-                        @Override
-                        public void onCancel(DialogInterface dialog) {
-                            // The user chose not to take the recovery action
-                            onProviderInstallerNotAvailable();
-                        }
-                    });
+            availability.showErrorDialogFragment(this, errorCode, ERROR_DIALOG_REQUEST_CODE,
+                new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        // The user chose not to take the recovery action
+                        onProviderInstallerNotAvailable();
+                    }
+                });
         } else {
             // Google Play services is not available.
             onProviderInstallerNotAvailable();
@@ -62,8 +58,7 @@ public class MainActivity2 extends Activity
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode,
-                                    Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == ERROR_DIALOG_REQUEST_CODE) {
             // Adding a fragment via GoogleApiAvailability.showErrorDialogFragment

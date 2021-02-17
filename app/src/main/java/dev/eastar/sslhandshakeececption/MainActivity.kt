@@ -1,10 +1,12 @@
 package dev.eastar.sslhandshakeececption
 
 import android.content.*
+import android.log.Log
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.security.ProviderInstaller
+import dev.eastar.sslhandshakeececption.databinding.ActivityMainBinding
 
 private const val ERROR_DIALOG_REQUEST_CODE = 1
 
@@ -13,20 +15,29 @@ private const val ERROR_DIALOG_REQUEST_CODE = 1
  */
 class MainActivity : AppCompatActivity(), ProviderInstaller.ProviderInstallListener {
 
+
     private var retryProviderInstall: Boolean = false
 
     //Update the security provider when the activity is created.
+    private lateinit var bb: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ProviderInstaller.installIfNeededAsync(this, this)
+        bb = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bb.root)
+
+
     }
+
 
     /**
      * This method is only called if the provider is successfully updated
      * (or is already up-to-date).
      */
     override fun onProviderInstalled() {
-        // Provider is up-to-date, app can make secure network calls.
+        Log.toast(this, "onProviderInstalled")
+        bb.button.setOnClickListener { run(this) }
     }
 
     /**

@@ -1,0 +1,30 @@
+
+02-17 17:13:20.291 1136-22573/? D/KeyguardUpdateMonitor: sendKeyguardVisibilityChanged(true)
+02-17 17:13:20.291 1136-22573/? I/KeyguardUpdateMonitor: visibility is same
+02-17 17:13:20.291 1136-300/? D/KeyguardUpdateMonitor: sendKeyguardVisibilityChanged(true)
+02-17 17:13:20.291 1136-300/? I/KeyguardUpdateMonitor: visibility is same
+02-17 17:13:20.291 918-1006/? D/STATUSBAR-StatusBarManagerService: manageDisableList what=0x0 pkg=WindowManager.LayoutParams
+02-17 17:13:20.291 918-1246/? W/ActivityManager: Permission Denial: getCurrentUser() from pid=32658, uid=10230 requires android.permission.INTERACT_ACROSS_USERS
+02-17 17:13:20.301 918-1702/? D/StatusBarManagerService: tr p:32658,o:f
+02-17 17:13:20.301 32658-32658/? I/Test: [Net::getBaseUrl]DEV : https://moffice-dev.hanabank.com:8080/
+02-17 17:13:20.301 1293-1293/? D/SurfaceWidgetView: destroyHardwareResources():1165632632
+02-17 17:13:20.311 1136-15054/? D/KeyguardUpdateMonitor: sendKeyguardVisibilityChanged(true)
+02-17 17:13:20.311 1136-15054/? I/KeyguardUpdateMonitor: visibility is same
+02-17 17:13:20.311 1136-1136/? D/PhoneStatusBar: setTransGradationMode=false, mTransparentMode=false, mSemiTransparentMode=false, mMultiWindowMode=false
+02-17 17:13:20.311 1136-27205/? D/KeyguardUpdateMonitor: sendKeyguardVisibilityChanged(true)
+02-17 17:13:20.311 1136-27205/? I/KeyguardUpdateMonitor: visibility is same
+02-17 17:13:20.311 918-7671/? D/CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1958400  uid : 1000  pid : 918  tag : ACTIVITY_RESUME_BOOSTER@6
+02-17 17:13:20.311 918-7671/? D/CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1958400  uid : 1000  pid : 918  pkgName : ACTIVITY_RESUME_BOOSTER@6
+02-17 17:13:20.311 918-7671/? W/ActivityManager: mDVFSHelper.acquire()
+02-17 17:13:20.311 918-1006/? D/STATUSBAR-StatusBarManagerService: manageDisableList what=0x0 pkg=WindowManager.LayoutParams
+02-17 17:13:20.321 918-1108/? V/SmartFaceService - 3rd party pause: onReceive [android.intent.action.ACTIVITY_STATE/com.hanabank.smt.android/pause]
+02-17 17:13:20.331 32658-32658/? I/Test: [Net::getBaseUrl]DEV : https://moffice-dev.hanabank.com:8080/
+02-17 17:13:20.331 32658-2362/? D/com.hanabank.smt.android: com.hanabank.smt.android.com.app.utils.AppUtils > HANA_DEVICE=[Android;4.4.2;samsung;SM-P605L;359045050504549;+821056450459;kr;LG+U%2B;8982067531035426308;450061056450459;3.00;AC:5A:14:1B:30:9F;] USER_AGENT=[android]
+02-17 17:13:20.331 32658-2362/? D/com.hanabank.smt.android: com.hanabank.smt.android.com.app.utils.AppUtils > HANA_DEVICE=[Android;4.4.2;samsung;SM-P605L;359045050504549;+821056450459;kr;LG+U%2B;8982067531035426308;450061056450459;3.00;AC:5A:14:1B:30:9F;] USER_AGENT=[android]
+02-17 17:13:20.331 32658-2362/? I/Test: [HeaderInterceptor::intercept]userAgent : HANA_DEVICE=[Android;4.4.2;samsung;SM-P605L;359045050504549;+821056450459;kr;LG+U%2B;8982067531035426308;450061056450459;3.00;AC:5A:14:1B:30:9F;] USER_AGENT=[android]
+02-17 17:13:20.331 32658-2362/? I/Test: [Net::getBaseUrl]DEV : https://moffice-dev.hanabank.com:8080/
+02-17 17:13:20.331 918-929/? D/StatusBarManagerService: semi p:32658,o:f
+02-17 17:13:20.331 1136-1146/? D/KeyguardUpdateMonitor: sendKeyguardVisibilityChanged(true)
+02-17 17:13:20.331 1136-1146/? I/KeyguardUpdateMonitor: visibility is same
+02-17 17:13:20.341 1136-1136/? D/PhoneStatusBar: setSemiTransparentMode=false, mTransparentMode=false, mSemiTransparentMode=false, mMultiWindowMode=false
+02-17 17:13:20.341 1136-300/? D/KeyguardUpdateMonitor: sendKeyguardVisibilityChanged(true)

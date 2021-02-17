@@ -8,13 +8,11 @@ import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.security.ProviderInstaller
 import dev.eastar.sslhandshakeececption.databinding.ActivityMainBinding
 
-private const val ERROR_DIALOG_REQUEST_CODE = 1
 
-/**
- * Sample activity using {@link ProviderInstaller}.
- */
-class MainActivity : AppCompatActivity(), ProviderInstaller.ProviderInstallListener {
-
+class MainInstallIfNeededAsync : AppCompatActivity(), ProviderInstaller.ProviderInstallListener {
+    companion object {
+        const val ERROR_DIALOG_REQUEST_CODE = 1
+    }
 
     private var retryProviderInstall: Boolean = false
 
@@ -23,11 +21,10 @@ class MainActivity : AppCompatActivity(), ProviderInstaller.ProviderInstallListe
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         ProviderInstaller.installIfNeededAsync(this, this)
         bb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bb.root)
-
-
     }
 
 
@@ -37,6 +34,7 @@ class MainActivity : AppCompatActivity(), ProviderInstaller.ProviderInstallListe
      */
     override fun onProviderInstalled() {
         Log.toast(this, "onProviderInstalled")
+
         bb.button.setOnClickListener { run(this) }
     }
 
@@ -49,7 +47,7 @@ class MainActivity : AppCompatActivity(), ProviderInstaller.ProviderInstallListe
             if (isUserResolvableError(errorCode)) {
                 // Recoverable error. Show a dialog prompting the user to
                 // install/update/enable Google Play services.
-                showErrorDialogFragment(this@MainActivity, errorCode, ERROR_DIALOG_REQUEST_CODE) {
+                showErrorDialogFragment(this@MainInstallIfNeededAsync, errorCode, ERROR_DIALOG_REQUEST_CODE) {
                     // The user chose not to take the recovery action
                     onProviderInstallerNotAvailable()
                 }

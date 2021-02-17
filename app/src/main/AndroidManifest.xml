@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SSLHandshakeEcecption">
         <activity
-            android:name=".ConnectSample"
-            android:label="안되는">
+            android:name=".MainError"
+            android:label="되지않는">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,18 @@
 
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="될것같은">
+            android:name=".MainInstallIfNeeded"
+            android:label="되는동기">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".MainInstallIfNeededAsync"
+            android:label="되는비동기">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
